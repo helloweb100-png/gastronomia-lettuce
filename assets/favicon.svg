@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Gastronómica Lettuce">
+  <rect width="64" height="64" rx="14" fill="#0c0c0d"/>
+  <path fill="#f4f1ec" d="M13 12h22v4h-4v30h14v-8h4v14H13v-4h5V16h-5z"/>
+  <path fill="#e11d2e" d="M28 20h30L43 36z"/>
+  <path fill="#f4f1ec" d="M42 36h2v14h-2z"/>
+  <ellipse cx="43" cy="51" rx="9" ry="2.4" fill="#f4f1ec"/>
+</svg>

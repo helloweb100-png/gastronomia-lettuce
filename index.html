@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="es-MX" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Catering para eventos y banquetes | Gastronómica Lettuce</title>
+  <meta name="description" content="Catering para eventos sociales y corporativos: barras libres, banquetes, coffee break, taquizas y meseros. Cotiza tu evento con Gastronómica Lettuce.">
+  <meta name="theme-color" content="#0a0a0b">
+  <meta name="color-scheme" content="light dark">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <!-- Open Graph / redes -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:site_name" content="Gastronómica Lettuce">
+  <meta property="og:title" content="Catering para eventos y banquetes | Gastronómica Lettuce">
+  <meta property="og:description" content="Barras libres, banquetes, coffee break, taquizas y personal de servicio para eventos sociales y corporativos. Cotiza tu evento.">
+  <meta property="og:image" content="assets/img/marca-negro.jpg">
+  <meta property="og:image:alt" content="Logotipo de Gastronómica Lettuce: letra L con una copa de martini rojo">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Catering para eventos y banquetes | Gastronómica Lettuce">
+  <meta name="twitter:description" content="Barras libres, banquetes, coffee break, taquizas y personal de servicio para eventos sociales y corporativos. Cotiza tu evento.">
+
+  <!-- Identidad -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Tipografías: Bodoni Moda (titulares, hermana del serif del logotipo), Manrope (texto), IBM Plex Mono (etiquetas) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@300..800&display=swap">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Las animaciones de entrada solo se activan si hay JavaScript. Red de seguridad: si script.js no arranca
+       en 4 s, se vuelve al modo sin JS y todo el contenido queda visible. -->
+  <script>
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    setTimeout(function () {
+      if (!window.__lettuceListo) { document.documentElement.className = document.documentElement.className.replace('js', 'no-js'); }
+    }, 4000);
+  </script>
+
+  <!-- Datos estructurados: solo datos reales entregados por el cliente -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Gastronómica Lettuce",
+    "alternateName": "Lettuce catering & events",
+    "description": "Soluciones integrales en alimentos y bebidas para eventos sociales y corporativos: barras libres, banquetes, caterings, coffee break, taquizas, capacitación y personal de servicio.",
+    "sameAs": ["https://www.instagram.com/gastronomicalettuce"],
+    "knowsAbout": ["Catering", "Banquetes", "Barras de bebidas", "Coffee break", "Taquizas", "Eventos corporativos", "Servicio de meseros"],
+    "makesOffer": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Barras libres y servicio de bebidas" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Banquetes y buffets" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Catering para eventos sociales y corporativos" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Coffee break y estaciones de café" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Taquizas" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Servicio profesional de meseros, barman y runners" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Capacitación" } }
+    ]
+  }
+  </script>
+
+  <!-- script.js va primero para que una CDN lenta nunca retrase la página; anime.js 3.2.2 es opcional
+       (solo refina la copa de la barra): si la CDN falla, script.js usa la Web Animations API y se ve igual -->
+  <script src="script.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" defer></script>
+</head>
+
+<body>
+  <!-- ===== Sprite SVG: íconos y piezas reutilizables ===== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="citrico" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="47" fill="var(--c1, #ff8a5c)"/>
+        <circle cx="50" cy="50" r="42" fill="#fff2e6"/>
+        <circle cx="50" cy="50" r="38" fill="var(--c2, #ff6f4a)"/>
+        <g stroke="#fff2e6" stroke-width="3.2" stroke-linecap="round">
+          <path d="M50 14v72M14 50h72M24.5 24.5l51 51M75.5 24.5l-51 51"/>
+        </g>
+        <circle cx="50" cy="50" r="5" fill="#fff2e6"/>
+      </symbol>
+      <symbol id="i-barra" viewBox="0 0 48 48"><path d="M8 9h32L24 27z"/><path d="M24 27v13M15 40h18"/><path d="M13 15h22"/></symbol>
+      <symbol id="i-banquete" viewBox="0 0 48 48"><path d="M7 33a17 17 0 0 1 34 0z"/><path d="M3 37h42"/><circle cx="24" cy="12" r="2.4"/></symbol>
+      <symbol id="i-catering" viewBox="0 0 48 48"><path d="M14 31v9h20v-9"/><path d="M14 31c-6-1-8-9-2-12 1-6 9-7 12-2 3-5 11-4 12 2 6 3 4 11-2 12"/><path d="M14 36h20"/></symbol>
+      <symbol id="i-cafe" viewBox="0 0 48 48"><path d="M9 19h23v11a9 9 0 0 1-9 9h-5a9 9 0 0 1-9-9z"/><path d="M32 22h3.5a4.5 4.5 0 0 1 0 9H32"/><path d="M15 8c-1.5 2 1.5 3.5 0 6M21 8c-1.5 2 1.5 3.5 0 6M27 8c-1.5 2 1.5 3.5 0 6"/></symbol>
+      <symbol id="i-taco" viewBox="0 0 48 48"><path d="M5 34a19 19 0 0 1 38 0z"/><path d="M11 34a13 13 0 0 1 26 0"/><path d="M15 24c2-3 5-5 9-5"/></symbol>
+      <symbol id="i-corp" viewBox="0 0 48 48"><rect x="7" y="16" width="34" height="23" rx="3"/><path d="M18 16v-4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v4"/><path d="M7 27h34"/><path d="M22 25v5h4v-5"/></symbol>
+      <symbol id="i-cap" viewBox="0 0 48 48"><path d="M3 18l21-9 21 9-21 9z"/><path d="M12 22.5V32c0 3 5.5 6 12 6s12-3 12-6v-9.5"/><path d="M45 18v13"/></symbol>
+      <symbol id="i-calidad" viewBox="0 0 48 48"><path d="M24 5l5.2 11 12 1.6-8.8 8.3 2.2 11.9L24 32l-10.6 5.8 2.2-11.9L6.8 17.6l12-1.6z"/></symbol>
+      <symbol id="i-orden" viewBox="0 0 48 48"><rect x="7" y="9" width="34" height="30" rx="4"/><path d="M7 19h34M17 5v8M31 5v8"/><path d="M16 28l5 5 11-11"/></symbol>
+      <symbol id="i-servicio" viewBox="0 0 48 48"><path d="M24 6c-5 8-4 14 0 17 4-3 5-9 0-17z"/><path d="M8 40c3-9 9-13 16-13s13 4 16 13z"/><path d="M5 40h38"/></symbol>
+      <symbol id="i-flecha" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
+      <symbol id="i-brillo" viewBox="0 0 24 24"><path d="M12 1.5l2.2 8.3 8.3 2.2-8.3 2.2L12 22.5l-2.2-8.3L1.5 12l8.3-2.2z"/></symbol>
+      <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r=".9" fill="currentColor"/></symbol>
+      <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 2.5a9.5 9.5 0 0 0-8.2 14.3L2.6 21.4l4.7-1.2A9.5 9.5 0 1 0 12 2.5z"/><path d="M8.7 8.4c.3 2.8 3.9 6.4 6.9 6.8l1.4-1.3-2.2-1.1-.9.8c-.9-.4-2.2-1.5-2.7-2.5l.8-.9-1.1-2.2z"/></symbol>
+      <symbol id="i-reloj" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+      <symbol id="i-mas" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    </defs>
+  </svg>
+
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <!-- ===== Cargador: mesa que se monta, copa que se llena (máx. 2.5 s; respaldo en CSS) ===== -->
+  <div id="cargador" class="cargador" role="status" aria-live="polite">
+    <div class="cargador-fondo" aria-hidden="true">
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
+    <div class="cargador-centro">
+      <div class="cargador-marca">
+        <img src="assets/img/marca-negro.jpg" alt="Gastronómica Lettuce, catering &amp; events" width="532" height="279">
+        <span class="cargador-tapa" aria-hidden="true"></span>
+      </div>
+      <div class="cargador-barra" aria-hidden="true"><span id="cargador-nivel"></span></div>
+      <p class="cargador-texto"><span id="cargador-pct">00</span><small>%</small> <em>Montando la mesa</em></p>
+    </div>
+    <div class="cargador-telon cargador-telon--a" aria-hidden="true"></div>
+    <div class="cargador-telon cargador-telon--b" aria-hidden="true"></div>
+  </div>
+
+  <div class="progreso" aria-hidden="true"><span id="progreso-barra"></span></div>
+
+  <!-- ===== Encabezado flotante ===== -->
+  <header class="cabecera" id="cabecera">
+    <div class="cabecera-in">
+      <a class="marca" href="#inicio" aria-label="Gastronómica Lettuce, ir al inicio">
+        <span class="logo-crop"><img src="assets/img/logo-fuente.jpg" alt="Logotipo de Gastronómica Lettuce: una L serif con copa de martini rojo y un cilindro rayado" width="728" height="1600"></span>
+        <span class="marca-texto"><strong>Lettuce</strong><small>catering &amp; events</small></span>
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#bebidas">Bebidas</a>
+        <a href="#alimentos">Alimentos</a>
+        <a href="#equipo">Equipo</a>
+        <a href="#metodo">Método</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <a class="btn btn-mini btn-primario" href="#contacto" data-servicio="">Cotiza tu evento</a>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu-movil" aria-label="Abrir menú"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="menu-movil" id="menu-movil" aria-hidden="true" hidden>
+    <nav aria-label="Menú móvil">
+      <a href="#servicios" style="--i:0"><span>01</span>Servicios</a>
+      <a href="#bebidas" style="--i:1"><span>02</span>Bebidas</a>
+      <a href="#alimentos" style="--i:2"><span>03</span>Alimentos</a>
+      <a href="#equipo" style="--i:3"><span>04</span>Equipo</a>
+      <a href="#metodo" style="--i:4"><span>05</span>Método</a>
+      <a href="#contacto" style="--i:5"><span>06</span>Contacto</a>
+    </nav>
+    <a class="btn btn-primario" href="#contacto" data-servicio="" style="--i:6">Estoy listo, quiero cotizar <svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg></a>
+  </div>
+
+  <main id="contenido" class="pagina">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero oscura" id="inicio" aria-labelledby="titulo-hero" data-spot>
+      <canvas class="hero-canvas" id="burbujas" aria-hidden="true"></canvas>
+      <div class="hero-aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="hero-rejilla" aria-hidden="true"></div>
+
+      <div class="contenedor hero-grid">
+        <div class="hero-texto">
+          <p class="etiqueta etiqueta-c" data-intro style="--i:0"><span class="punto" aria-hidden="true"></span>Gastronómica Lettuce · catering &amp; events</p>
+
+          <h1 id="titulo-hero" class="hero-h1">
+            <span class="h1-intro" data-intro style="--i:1">Catering para eventos que</span>
+            <span class="h1-linea"><span class="h1-in" style="--i:2"><em class="verbo v1">fluyen,</em></span></span>
+            <span class="h1-linea"><span class="h1-in" style="--i:3"><em class="verbo v2">se disfrutan</em></span></span>
+            <span class="h1-linea"><span class="h1-in" style="--i:4">y <em class="verbo v3">se recuerdan.</em></span></span>
+          </h1>
+
+          <p class="hero-bajada" data-intro style="--i:5">Alimentos, barras y personal de servicio para eventos sociales y corporativos. Calidad, organización y excelencia en el servicio, para que tú solo disfrutes.</p>
+
+          <div class="hero-acciones" data-intro style="--i:6">
+            <a class="btn btn-primario btn-mag" href="#contacto" data-servicio="">Quiero cotizar mi evento <svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg></a>
+            <a class="btn btn-fantasma" href="#servicios">Ver lo que servimos</a>
+          </div>
+
+          <ul class="hero-chips" data-intro style="--i:7" aria-label="Tipos de evento que atendemos">
+            <li>Eventos sociales</li><li>Corporativos</li><li>Fin de año</li><li>Ceremonias</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" role="img" aria-label="Ilustración de una copa de martini con líquido rojo en movimiento, rodeada de burbujas, cítricos y un anillo con los servicios de Lettuce">
+          <span class="L-gigante" aria-hidden="true" data-prof="0.35">L</span>
+
+          <div class="anillo3d" aria-hidden="true">
+            <svg class="anillo" viewBox="0 0 300 300" focusable="false">
+              <defs><path id="circ" d="M150,150 m-121,0 a121,121 0 1,1 242,0 a121,121 0 1,1 -242,0"/></defs>
+              <text><textPath href="#circ" textLength="750" lengthAdjust="spacing">BARRAS LIBRES ✦ BANQUETES ✦ COFFEE BREAK ✦ TAQUIZAS ✦ EVENTOS CORPORATIVOS ✦ CAPACITACIÓN ✦</textPath></text>
+            </svg>
+          </div>
+
+          <svg class="cilindro" viewBox="0 0 160 300" aria-hidden="true" focusable="false" data-prof="0.6">
+            <defs><clipPath id="cil-clip"><path d="M10 34v232c0 11 31 20 70 20s70-9 70-20V34a70 20 0 0 1-140 0z"/></clipPath></defs>
+            <g clip-path="url(#cil-clip)" stroke="rgba(255,255,255,.5)" stroke-width="1.6" fill="rgba(255,255,255,.035)">
+              <rect x="10" y="20" width="140" height="270" stroke="none"/>
+              <path d="M24 20v270M38 20v270M52 20v270M66 20v270M80 20v270M94 20v270M108 20v270M122 20v270M136 20v270" fill="none"/>
+            </g>
+            <ellipse cx="80" cy="34" rx="70" ry="20" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.7)" stroke-width="2"/>
+            <path d="M10 34v232c0 11 31 20 70 20s70-9 70-20V34" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="2"/>
+          </svg>
+
+          <svg class="copa" viewBox="0 0 400 600" aria-hidden="true" focusable="false" data-prof="1">
+            <defs>
+              <linearGradient id="h-liq" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#ffd3d8"/>
+                <stop offset=".38" stop-color="#ff4d5f"/>
+                <stop offset="1" stop-color="#b80f23"/>
+              </linearGradient>
+              <linearGradient id="h-plata" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#fff" stop-opacity=".95"/>
+                <stop offset=".5" stop-color="#9ca3ad" stop-opacity=".9"/>
+                <stop offset="1" stop-color="#fff" stop-opacity=".92"/>
+              </linearGradient>
+              <linearGradient id="h-vidrio" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#fff" stop-opacity=".2"/>
+                <stop offset="1" stop-color="#fff" stop-opacity=".05"/>
+              </linearGradient>
+              <clipPath id="h-clip"><path d="M46 150h308L206 332h-12z"/></clipPath>
+            </defs>
+            <ellipse cx="200" cy="552" rx="124" ry="22" fill="url(#h-vidrio)" stroke="url(#h-plata)" stroke-width="2"/>
+            <path d="M194 332h12v214h-12z" fill="url(#h-plata)" opacity=".92"/>
+            <path d="M46 150h308L206 332h-12z" fill="url(#h-vidrio)"/>
+            <g clip-path="url(#h-clip)">
+              <g class="nivel" id="hero-nivel">
+                <g class="liquido">
+                  <g class="ola ola-b"><path d="M-100 196q25-10 50 0t50 0t50 0t50 0t50 0t50 0t50 0t50 0t50 0t50 0t50 0t50 0V380h-600z" fill="#ff9aa6" opacity=".55"/></g>
+                  <g class="ola"><path d="M-100 206q25-10 50 0t50 0t50 0t50 0t50 0t50 0t50 0t50 0t50 0t50 0t50 0t50 0V380h-600z" fill="url(#h-liq)"/></g>
+                  <circle class="bur b1" cx="196" cy="306" r="3.2" fill="#fff"/>
+                  <circle class="bur b2" cx="212" cy="290" r="2.2" fill="#fff"/>
+                  <circle class="bur b3" cx="180" cy="274" r="2.8" fill="#fff"/>
+                  <circle class="bur b4" cx="232" cy="262" r="2" fill="#fff"/>
+                  <circle class="bur b5" cx="160" cy="250" r="2.4" fill="#fff"/>
+                  <circle class="bur b6" cx="252" cy="236" r="1.8" fill="#fff"/>
+                </g>
+              </g>
+            </g>
+            <path class="copa-contorno" id="hero-contorno" d="M46 150h308L206 332h-12z" fill="none" stroke="url(#h-plata)" stroke-width="3" stroke-linejoin="round"/>
+            <ellipse cx="200" cy="150" rx="154" ry="14" fill="rgba(255,255,255,.07)" stroke="url(#h-plata)" stroke-width="2"/>
+            <path class="brillo" d="M80 166L172 292" stroke="#fff" stroke-opacity=".6" stroke-width="5" stroke-linecap="round"/>
+            <g transform="translate(316 104) rotate(-16)"><use href="#citrico" width="76" height="76" style="--c1:#ff7a66;--c2:#ff5a4a"/></g>
+          </svg>
+
+          <svg class="flota f1" viewBox="0 0 100 100" aria-hidden="true" data-prof="1.4"><use href="#citrico" style="--c1:#ff8a5c;--c2:#ff7a4a"/></svg>
+          <svg class="flota f2" viewBox="0 0 100 100" aria-hidden="true" data-prof="1.8"><use href="#citrico" style="--c1:#7bd88f;--c2:#a8ec9c"/></svg>
+          <svg class="flota f3" viewBox="0 0 100 100" aria-hidden="true" data-prof="1.2"><use href="#citrico" style="--c1:#ff6b7a;--c2:#ff8f9a"/></svg>
+
+          <svg class="chispa s1" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-brillo"/></svg>
+          <svg class="chispa s2" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-brillo"/></svg>
+          <svg class="chispa s3" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-brillo"/></svg>
+          <svg class="chispa s4" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-brillo"/></svg>
+        </div>
+      </div>
+
+      <a class="hero-scroll" href="#nosotros" aria-label="Seguir bajando"><span>Desliza</span><i aria-hidden="true"></i></a>
+
+      <div class="cinta cinta-hero" aria-hidden="true">
+        <div class="cinta-pista" data-cinta data-vel="0.5">
+          <span>Barras libres</span><svg class="chispa-i"><use href="#i-brillo"/></svg>
+          <span>Banquetes</span><svg class="chispa-i"><use href="#i-brillo"/></svg>
+          <span>Caterings</span><svg class="chispa-i"><use href="#i-brillo"/></svg>
+          <span>Coffee break</span><svg class="chispa-i"><use href="#i-brillo"/></svg>
+          <span>Taquizas</span><svg class="chispa-i"><use href="#i-brillo"/></svg>
+          <span>Eventos corporativos</span><svg class="chispa-i"><use href="#i-brillo"/></svg>
+          <span>Capacitación</span><svg class="chispa-i"><use href="#i-brillo"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== MANIFIESTO ===================== -->
+    <section class="manifiesto" id="nosotros" aria-labelledby="titulo-nosotros">
+      <div class="contenedor">
+        <p class="etiqueta" data-reveal>Quiénes somos</p>
+        <h2 id="titulo-nosotros" class="visualmente-oculto">Soluciones integrales en alimentos y bebidas para cada evento</h2>
+        <p class="manifiesto-texto" id="manifiesto-texto" data-scrub>En Gastronómica Lettuce ofrecemos soluciones integrales en alimentos y bebidas, diseñadas para adaptarse a cada tipo de evento. Sabemos que cada evento es diferente, por eso no solo proveemos alimentos: creamos <em>experiencias que fluyen, se disfrutan y se recuerdan.</em></p>
+
+        <div class="pilares">
+          <article class="pilar" data-reveal style="--d:0">
+            <span class="pilar-n">01</span>
+            <svg class="pilar-ico" aria-hidden="true"><use href="#i-calidad"/></svg>
+            <h3>Calidad</h3>
+            <p>Sabor y presentación pensados para que cada platillo y cada copa estén a la altura del momento.</p>
+          </article>
+          <article class="pilar" data-reveal style="--d:1">
+            <span class="pilar-n">02</span>
+            <svg class="pilar-ico" aria-hidden="true"><use href="#i-orden"/></svg>
+            <h3>Organización</h3>
+            <p>Cada elemento en el momento correcto y en armonía con el desarrollo de tu evento.</p>
+          </article>
+          <article class="pilar" data-reveal style="--d:2">
+            <span class="pilar-n">03</span>
+            <svg class="pilar-ico" aria-hidden="true"><use href="#i-servicio"/></svg>
+            <h3>Excelencia en el servicio</h3>
+            <p>Atención, actitud y preparación del personal: los detalles que hacen la diferencia.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICIOS (scroll horizontal fijado) ===================== -->
+    <section class="servicios" id="servicios" aria-labelledby="titulo-servicios">
+      <div class="hs" id="hs">
+        <div class="hs-sticky">
+          <div class="contenedor hs-cabeza">
+            <div>
+              <p class="etiqueta" data-reveal>Lo que servimos</p>
+              <h2 id="titulo-servicios" data-split>Siete formas de hacer que tu evento fluya</h2>
+            </div>
+            <div class="hs-meta" aria-hidden="true">
+              <span class="hs-cuenta"><b id="hs-actual">01</b> / 07</span>
+              <span class="hs-hilo"><i id="hs-barra"></i></span>
+            </div>
+          </div>
+
+          <ul class="hs-pista" id="hs-pista" role="list">
+            <li class="svc" data-tilt>
+              <span class="svc-n">01</span>
+              <svg class="svc-ico" aria-hidden="true"><use href="#i-barra"/></svg>
+              <h3>Barras libres</h3>
+              <p>Barra abierta, ritmo constante: atención ágil, presentación impecable y la rapidez que hace que todos brinden a tiempo.</p>
+              <a class="svc-cta" href="#contacto" data-servicio="Barra libre / barra de bebidas">Quiero esto en mi evento <svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg></a>
+            </li>
+            <li class="svc" data-tilt>
+              <span class="svc-n">02</span>
+              <svg class="svc-ico" aria-hidden="true"><use href="#i-banquete"/></svg>
+              <h3>Banquetes</h3>
+              <p>Banquetes formales con montaje cuidado, presentación elegante y un equipo atento a cada detalle de la mesa.</p>
+              <a class="svc-cta" href="#contacto" data-servicio="Banquete">Quiero esto en mi evento <svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg></a>
+            </li>
+            <li class="svc" data-tilt>
+              <span class="svc-n">03</span>
+              <svg class="svc-ico" aria-hidden="true"><use href="#i-catering"/></svg>
+              <h3>Caterings</h3>
+              <p>Propuestas gastronómicas versátiles para eventos sociales y corporativos, adaptadas al formato y a las necesidades de tu evento.</p>
+              <a class="svc-cta" href="#contacto" data-servicio="Catering">Quiero esto en mi evento <svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg></a>
+            </li>
+            <li class="svc" data-tilt>
+              <span class="svc-n">04</span>
+              <svg class="svc-ico" aria-hidden="true"><use href="#i-cafe"/></svg>
+              <h3>Coffee break</h3>
+              <p>Pausas que reactivan: estaciones de café, agua y jugos listas a tiempo para que la agenda de tu evento no se detenga.</p>
+              <a class="svc-cta" href="#contacto" data-servicio="Coffee break">Quiero esto en mi evento <svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg></a>
+            </li>
+            <li class="svc" data-tilt>
+              <span class="svc-n">05</span>
+              <svg class="svc-ico" aria-hidden="true"><use href="#i-taco"/></svg>
+              <h3>Taquizas</h3>
+              <p>El sabor que todos piden, servido con orden y presentación de evento para que cada invitado disfrute sin complicaciones.</p>
+              <a class="svc-cta" href="#contacto" data-servicio="Taquiza">Quiero esto en mi evento <svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg></a>
+            </li>
+            <li class="svc" data-tilt>
+              <span class="svc-n">06</span>
+              <svg class="svc-ico" aria-hidden="true"><use href="#i-corp"/></svg>
+              <h3>Eventos corporativos y empresariales</h3>
+              <p>Desde reuniones hasta cierres de año: alimentos, bebidas y personal con la imagen que tu empresa merece.</p>
+              <a class="svc-cta" href="#contacto" data-servicio="Evento corporativo / empresarial">Quiero esto en mi evento <svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg></a>
+            </li>
+            <li class="svc" data-tilt>
+              <span class="svc-n">07</span>
+              <svg class="svc-ico" aria-hidden="true"><use href="#i-cap"/></svg>
+              <h3>Capacitación</h3>
+              <p>Formación para el servicio en eventos: protocolo, atención al cliente, manejo de eventos y presentación profesional.</p>
+              <a class="svc-cta" href="#contacto" data-servicio="Capacitación">Quiero saber más <svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== BARRA DE BEBIDAS ===================== -->
+    <section class="barra oscura" id="bebidas" aria-labelledby="titulo-barra" data-spot>
+      <div class="barra-brillo" aria-hidden="true"></div>
+      <div class="contenedor barra-grid">
+        <div class="barra-vis" aria-hidden="true">
+          <div class="barra-halo"></div>
+          <svg class="copa copa-barra" id="copa-barra" viewBox="0 0 400 600" focusable="false">
+            <defs>
+              <linearGradient id="b-liq" x1="0" y1="0" x2="0" y2="1">
+                <stop class="st-a" offset="0" stop-color="#ffd3d8"/>
+                <stop class="st-b" offset=".38" stop-color="#ff4d5f"/>
+                <stop class="st-c" offset="1" stop-color="#b80f23"/>
+              </linearGradient>
+              <linearGradient id="b-plata" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#fff" stop-opacity=".95"/>
+                <stop offset=".5" stop-color="#9ca3ad" stop-opacity=".9"/>
+                <stop offset="1" stop-color="#fff" stop-opacity=".92"/>
+              </linearGradient>
+              <linearGradient id="b-vidrio" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#fff" stop-opacity=".2"/>
+                <stop offset="1" stop-color="#fff" stop-opacity=".05"/>
+              </linearGradient>
+              <clipPath id="b-clip"><path d="M46 150h308L206 332h-12z"/></clipPath>
+            </defs>
+            <ellipse cx="200" cy="552" rx="124" ry="22" fill="url(#b-vidrio)" stroke="url(#b-plata)" stroke-width="2"/>
+            <path d="M194 332h12v214h-12z" fill="url(#b-plata)" opacity=".92"/>
+            <path d="M46 150h308L206 332h-12z" fill="url(#b-vidrio)"/>
+            <g clip-path="url(#b-clip)">
+              <g class="nivel" id="barra-nivel">
+                <g class="liquido">
+                  <g class="ola ola-b"><path d="M-100 196q25-10 50 0t50 0t50 0t50 0t50 0t50 0t50 0t50 0t50 0t50 0t50 0t50 0V380h-600z" fill="url(#b-liq)" opacity=".5"/></g>
+                  <g class="ola"><path d="M-100 206q25-10 50 0t50 0t50 0t50 0t50 0t50 0t50 0t50 0t50 0t50 0t50 0t50 0V380h-600z" fill="url(#b-liq)"/></g>
+                  <circle class="bur b1" cx="196" cy="306" r="3.2" fill="#fff"/>
+                  <circle class="bur b2" cx="212" cy="290" r="2.2" fill="#fff"/>
+                  <circle class="bur b3" cx="180" cy="274" r="2.8" fill="#fff"/>
+                  <circle class="bur b4" cx="232" cy="262" r="2" fill="#fff"/>
+                  <circle class="bur b5" cx="160" cy="250" r="2.4" fill="#fff"/>
+                </g>
+              </g>
+            </g>
+            <path d="M46 150h308L206 332h-12z" fill="none" stroke="url(#b-plata)" stroke-width="3" stroke-linejoin="round"/>
+            <ellipse cx="200" cy="150" rx="154" ry="14" fill="rgba(255,255,255,.07)" stroke="url(#b-plata)" stroke-width="2"/>
+            <path class="brillo" d="M80 166L172 292" stroke="#fff" stroke-opacity=".6" stroke-width="5" stroke-linecap="round"/>
+          </svg>
+          <p class="barra-nombre" id="barra-nombre">Con alcohol</p>
+        </div>
+
+        <div class="barra-info">
+          <p class="etiqueta etiqueta-c" data-reveal>Servicio de bebidas</p>
+          <h2 id="titulo-barra" data-split>La barra no es un punto de servicio. Es el centro del evento.</h2>
+          <p class="barra-lead" data-reveal>Cada barra está pensada como un elemento dinámico dentro del evento, donde la atención, la presentación y la rapidez hacen la diferencia.</p>
+
+          <div class="tabs" role="tablist" aria-label="Tipos de barra" data-reveal>
+            <button class="tab" role="tab" type="button" id="tab-1" aria-controls="panel-1" aria-selected="true" data-liq="#ffd3d8|#ff4d5f|#b80f23" data-nombre="Con alcohol">Con alcohol</button>
+            <button class="tab" role="tab" type="button" id="tab-2" aria-controls="panel-2" aria-selected="false" tabindex="-1" data-liq="#eaffd8|#5bdc8b|#137a4a" data-nombre="Sin alcohol">Sin alcohol</button>
+            <button class="tab" role="tab" type="button" id="tab-3" aria-controls="panel-3" aria-selected="false" tabindex="-1" data-liq="#fff1c9|#ffb43a|#b4540a" data-nombre="Barra libre">Barra libre</button>
+            <button class="tab" role="tab" type="button" id="tab-4" aria-controls="panel-4" aria-selected="false" tabindex="-1" data-liq="#f3e1ff|#b66cff|#5a1fa6" data-nombre="Por copa">Por copa</button>
+            <button class="tab" role="tab" type="button" id="tab-5" aria-controls="panel-5" aria-selected="false" tabindex="-1" data-liq="#d6f1ff|#3fb2ff|#0b5a9e" data-nombre="Por hora">Por hora</button>
+            <button class="tab" role="tab" type="button" id="tab-6" aria-controls="panel-6" aria-selected="false" tabindex="-1" data-liq="#fff7da|#e6c872|#9a7424" data-nombre="Empresarial y fin de año">Empresarial y fin de año</button>
+          </div>
+
+          <div class="tab-paneles" data-reveal>
+            <div class="panel" role="tabpanel" id="panel-1" aria-labelledby="tab-1">
+              <h3>Barras con alcohol</h3>
+              <p>Una barra que se vuelve parte del espectáculo: servicio atento, presentación cuidada y rapidez para que el brindis nunca espere.</p>
+            </div>
+            <div class="panel" role="tabpanel" id="panel-2" aria-labelledby="tab-2" hidden>
+              <h3>Barras sin alcohol</h3>
+              <p>Para que todos tengan algo especial que levantar: opciones frescas, bien presentadas y servidas con el mismo cuidado.</p>
+            </div>
+            <div class="panel" role="tabpanel" id="panel-3" aria-labelledby="tab-3" hidden>
+              <h3>Barras libres</h3>
+              <p>Servicio constante y ordenado durante el evento, con un equipo que mantiene el ritmo sin perder la elegancia.</p>
+            </div>
+            <div class="panel" role="tabpanel" id="panel-4" aria-labelledby="tab-4" hidden>
+              <h3>Servicio por copa</h3>
+              <p>Una modalidad flexible para eventos donde cada invitado elige su bebida, con atención personalizada en la barra.</p>
+            </div>
+            <div class="panel" role="tabpanel" id="panel-5" aria-labelledby="tab-5" hidden>
+              <h3>Servicio por hora</h3>
+              <p>Una barra con tiempo definido para planear la duración del servicio de acuerdo con el programa de tu evento.</p>
+            </div>
+            <div class="panel" role="tabpanel" id="panel-6" aria-labelledby="tab-6" hidden>
+              <h3>Eventos empresariales y de fin de año</h3>
+              <p>Barras que representan a tu empresa: presentación impecable, servicio ágil y un brindis a la altura de tu equipo.</p>
+            </div>
+          </div>
+
+          <p class="barra-cierre" data-reveal>Nuestro enfoque está en que el servicio sea ágil, organizado y siempre alineado al estilo del evento.</p>
+          <a class="btn btn-primario btn-mag" href="#contacto" data-servicio="Barra libre / barra de bebidas" data-reveal>Quiero mi barra <svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== IMAGEN QUE SE ABRE AL HACER SCROLL ===================== -->
+    <section class="expande" id="montaje" aria-labelledby="titulo-expande">
+      <div class="expande-sticky">
+        <div class="expande-marco" id="expande-marco">
+          <img class="expande-img" data-foto src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&amp;fit=crop&amp;w=1920&amp;q=75" alt="Salón de eventos con mesas de banquete montadas y mantelería elegante" width="1920" height="1280" loading="lazy" decoding="async">
+          <div class="expande-velo"></div>
+        </div>
+        <div class="expande-textos">
+          <h2 id="titulo-expande" class="expande-t expande-t1">El montaje habla antes que tú.</h2>
+          <p class="expande-t expande-t2">Cada elemento, en el momento correcto.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ALIMENTOS ===================== -->
+    <section class="alimentos" id="alimentos" aria-labelledby="titulo-alimentos">
+      <div class="contenedor alimentos-grid">
+        <div class="alimentos-cabeza">
+          <p class="etiqueta" data-reveal>Servicio de alimentos</p>
+          <h2 id="titulo-alimentos" data-split>Menús pensados para el momento, no solo para el plato</h2>
+          <p class="alimentos-lead" data-reveal>Desarrollamos propuestas gastronómicas versátiles que se adaptan a distintos formatos y necesidades. Cada servicio se planea cuidando el sabor, la presentación y, sobre todo, la funcionalidad dentro del evento.</p>
+        </div>
+
+        <div class="alimentos-fotos" aria-hidden="false">
+          <figure class="foto-pila" id="foto-pila">
+            <img class="foto is-on" data-foto src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&amp;fit=crop&amp;w=1000&amp;q=75" alt="Platillo gourmet emplatado con presentación cuidada" width="1000" height="1250" loading="lazy" decoding="async">
+            <img class="foto" data-foto src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&amp;fit=crop&amp;w=1000&amp;q=75" alt="Brochetas y carnes asadas listas para servirse" width="1000" height="1250" loading="lazy" decoding="async">
+            <img class="foto" data-foto src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&amp;fit=crop&amp;w=1000&amp;q=75" alt="Plato fresco con ingredientes coloridos y verduras" width="1000" height="1250" loading="lazy" decoding="async">
+            <figcaption class="foto-leyenda"><span id="foto-leyenda">Catering para eventos</span></figcaption>
+          </figure>
+        </div>
+
+        <ul class="menu-lista" id="menu-lista" role="list">
+          <li class="menu-item is-on" data-foto-i="0">
+            <button class="menu-btn" type="button" aria-expanded="true"><span class="menu-n">01</span><span class="menu-t">Catering para eventos sociales y corporativos</span><svg class="ico" aria-hidden="true"><use href="#i-mas"/></svg></button>
+            <div class="menu-d"><p>Propuestas versátiles que se adaptan al formato, al ritmo y a las necesidades de tu evento.</p></div>
+          </li>
+          <li class="menu-item" data-foto-i="0">
+            <button class="menu-btn" type="button" aria-expanded="false"><span class="menu-n">02</span><span class="menu-t">Banquetes formales</span><svg class="ico" aria-hidden="true"><use href="#i-mas"/></svg></button>
+            <div class="menu-d"><p>Servicio con presentación cuidada y tiempos que respetan el programa de tu celebración.</p></div>
+          </li>
+          <li class="menu-item" data-foto-i="1">
+            <button class="menu-btn" type="button" aria-expanded="false"><span class="menu-n">03</span><span class="menu-t">Buffets</span><svg class="ico" aria-hidden="true"><use href="#i-mas"/></svg></button>
+            <div class="menu-d"><p>Variedad al alcance de todos, con montaje ordenado y atención constante en la mesa.</p></div>
+          </li>
+          <li class="menu-item" data-foto-i="2">
+            <button class="menu-btn" type="button" aria-expanded="false"><span class="menu-n">04</span><span class="menu-t">Box lunch</span><svg class="ico" aria-hidden="true"><use href="#i-mas"/></svg></button>
+            <div class="menu-d"><p>Prácticos, bien presentados y listos para jornadas, capacitaciones y eventos en movimiento.</p></div>
+          </li>
+          <li class="menu-item" data-foto-i="2">
+            <button class="menu-btn" type="button" aria-expanded="false"><span class="menu-n">05</span><span class="menu-t">Coffee break</span><svg class="ico" aria-hidden="true"><use href="#i-mas"/></svg></button>
+            <div class="menu-d"><p>Estaciones y pausas que mantienen la energía de tu agenda sin interrumpir el evento.</p></div>
+          </li>
+          <li class="menu-item" data-foto-i="1">
+            <button class="menu-btn" type="button" aria-expanded="false"><span class="menu-n">06</span><span class="menu-t">Taquizas</span><svg class="ico" aria-hidden="true"><use href="#i-mas"/></svg></button>
+            <div class="menu-d"><p>El sabor que todos esperan, servido con orden y presentación de evento.</p></div>
+          </li>
+          <li class="menu-item" data-foto-i="0">
+            <button class="menu-btn" type="button" aria-expanded="false"><span class="menu-n">07</span><span class="menu-t">Servicios personalizados</span><svg class="ico" aria-hidden="true"><use href="#i-mas"/></svg></button>
+            <div class="menu-d"><p>Cuéntanos tu idea y la convertimos en un servicio a la medida de tu evento.</p></div>
+          </li>
+        </ul>
+
+        <div class="alimentos-cierre">
+          <blockquote class="cita" id="cita-menu">
+            <p data-scrub>No se trata solo de servir alimentos, sino de que cada elemento esté en el momento correcto, con la presentación adecuada y en armonía con el desarrollo del evento.</p>
+          </blockquote>
+          <a class="btn btn-oscuro btn-mag" href="#contacto" data-servicio="Catering" data-reveal>Armemos mi menú <svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ESPECIALES ===================== -->
+    <section class="especiales oscura" id="especiales" aria-labelledby="titulo-especiales" data-spot>
+      <div class="especiales-aura" aria-hidden="true"></div>
+      <div class="contenedor">
+        <p class="etiqueta etiqueta-c" data-reveal>Servicios especiales</p>
+        <h2 id="titulo-especiales" data-split>Cuando tu evento pide un enfoque más específico</h2>
+        <p class="especiales-lead" data-reveal>Entendemos que existen eventos que requieren soluciones adaptadas a su contexto. Nuestro enfoque está en la <strong>discreción, la puntualidad y la sensibilidad</strong>, cuidando que todo funcione de manera adecuada sin interferir con el propósito del evento.</p>
+
+        <div class="especiales-palabras" aria-hidden="true">
+          <span data-reveal="left" style="--d:0">Discreción</span>
+          <span data-reveal="left" style="--d:1">Puntualidad</span>
+          <span data-reveal="left" style="--d:2">Sensibilidad</span>
+        </div>
+
+        <ul class="esp-grid" role="list">
+          <li class="esp-card" data-tilt data-reveal style="--d:0">
+            <svg class="esp-ico" aria-hidden="true"><use href="#i-cafe"/></svg>
+            <h3>Estaciones de café</h3>
+            <p>Café siempre listo, bien presentado y justo donde tu evento lo necesita.</p>
+          </li>
+          <li class="esp-card" data-tilt data-reveal style="--d:1">
+            <svg class="esp-ico" aria-hidden="true"><use href="#i-barra"/></svg>
+            <h3>Servicio de agua y jugos</h3>
+            <p>Hidratación fresca y ordenada para jornadas largas, reuniones y celebraciones.</p>
+          </li>
+          <li class="esp-card" data-tilt data-reveal style="--d:2">
+            <svg class="esp-ico" aria-hidden="true"><use href="#i-orden"/></svg>
+            <h3>Eventos deportivos</h3>
+            <p>Servicio práctico y ágil pensado para participantes, equipos y asistentes.</p>
+          </li>
+          <li class="esp-card" data-tilt data-reveal style="--d:3">
+            <svg class="esp-ico" aria-hidden="true"><use href="#i-servicio"/></svg>
+            <h3>Ceremonias y funerales</h3>
+            <p>Acompañamiento discreto, puntual y sensible, sin interferir con el propósito del evento.</p>
+          </li>
+        </ul>
+
+        <a class="btn btn-claro btn-mag" href="#contacto" data-servicio="Servicio especial (café, agua y jugos, deportivo, ceremonias)" data-reveal>Cuéntanos tu evento <svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg></a>
+      </div>
+    </section>
+
+    <!-- ===================== EQUIPO / MESEROS ===================== -->
+    <section class="equipo" id="equipo" aria-labelledby="titulo-equipo">
+      <div class="contenedor equipo-grid">
+        <div class="equipo-vis" aria-hidden="true">
+          <div class="sello">
+            <svg class="sello-texto" viewBox="0 0 300 300" focusable="false">
+              <defs><path id="circ2" d="M150,150 m-118,0 a118,118 0 1,1 236,0 a118,118 0 1,1 -236,0"/></defs>
+              <text><textPath href="#circ2" textLength="736" lengthAdjust="spacing">SERVICIO PROFESIONAL DE MESEROS ✦ BARMAN ✦ RUNNERS ✦ MONTAJE DE MESAS ✦</textPath></text>
+            </svg>
+            <div class="sello-centro"><span>L</span><small>personal<br>capacitado</small></div>
+          </div>
+        </div>
+
+        <div class="equipo-info">
+          <p class="etiqueta" data-reveal>Servicio profesional de meseros</p>
+          <h2 id="titulo-equipo" data-split>Nuestro equipo no solo cumple una función: representa la imagen de tu evento</h2>
+          <p class="equipo-lead" data-reveal>Contamos con personal capacitado en:</p>
+
+          <ol class="comp" role="list">
+            <li data-reveal style="--d:0"><span>01</span><strong>Protocolo de servicio</strong></li>
+            <li data-reveal style="--d:1"><span>02</span><strong>Atención al cliente</strong></li>
+            <li data-reveal style="--d:2"><span>03</span><strong>Manejo de eventos</strong></li>
+            <li data-reveal style="--d:3"><span>04</span><strong>Presentación profesional</strong></li>
+            <li data-reveal style="--d:4"><span>05</span><strong>Preparación de bebidas</strong></li>
+            <li data-reveal style="--d:5"><span>06</span><strong>Montaje de mesas</strong></li>
+          </ol>
+
+          <p class="equipo-cita" data-reveal>La diferencia entre un servicio común y uno verdaderamente profesional está en los detalles, en la actitud y en la preparación del personal.</p>
+          <p class="equipo-sec" data-reveal>También ofrecemos meseros, barman y runners para restaurantes o eventos sociales.</p>
+          <a class="btn btn-primario btn-mag" href="#contacto" data-servicio="Personal de servicio (meseros, barman, runners)" data-reveal>Quiero personal para mi evento <svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== MÉTODO ===================== -->
+    <section class="metodo oscura" id="metodo" aria-labelledby="titulo-metodo" data-spot>
+      <div class="contenedor">
+        <p class="etiqueta etiqueta-c" data-reveal>Así fluye tu evento</p>
+        <h2 id="titulo-metodo" data-split>Tú nos cuentas la idea. Nosotros cuidamos cada momento.</h2>
+
+        <ol class="pasos" id="pasos" role="list">
+          <li class="paso">
+            <span class="paso-n" aria-hidden="true">1</span>
+            <div><h3>Cuéntanos tu evento</h3><p>Tipo de evento, número de invitados, fecha y estilo. Con eso empezamos.</p></div>
+          </li>
+          <li class="paso">
+            <span class="paso-n" aria-hidden="true">2</span>
+            <div><h3>Diseñamos el servicio</h3><p>Alimentos, bebidas y personal alineados al estilo y a la funcionalidad de tu evento.</p></div>
+          </li>
+          <li class="paso">
+            <span class="paso-n" aria-hidden="true">3</span>
+            <div><h3>Montamos y operamos</h3><p>Cada elemento en el momento correcto, con presentación adecuada y un equipo atento.</p></div>
+          </li>
+          <li class="paso">
+            <span class="paso-n" aria-hidden="true">4</span>
+            <div><h3>Tú disfrutas</h3><p>Tu evento fluye, tus invitados lo viven y tú puedes estar con ellos.</p></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== BANDA CTA FIN DE AÑO ===================== -->
+    <section class="banda" aria-labelledby="titulo-banda">
+      <div class="banda-fondo" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="contenedor banda-in">
+        <p class="etiqueta etiqueta-c" data-reveal>Eventos empresariales y de fin de año</p>
+        <h2 id="titulo-banda" data-split>¿Ya pensaste en el brindis de fin de año?</h2>
+        <p data-reveal>Barras y servicio de alimentos para tu equipo, con presentación impecable y atención ágil. Nosotros nos encargamos de que todo fluya.</p>
+        <a class="btn btn-claro btn-mag" href="#contacto" data-servicio="Evento corporativo / empresarial" data-reveal>Estoy listo, quiero mi barra de fin de año <svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg></a>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACTO ===================== -->
+    <section class="contacto" id="contacto" aria-labelledby="titulo-contacto">
+      <div class="contenedor contacto-grid">
+        <div class="contacto-info">
+          <p class="etiqueta" data-reveal>Contacto</p>
+          <h2 id="titulo-contacto" data-split>Cuéntanos tu evento y armamos el servicio</h2>
+          <p class="contacto-lead" data-reveal>Llena el formulario con lo que ya tengas en mente. Si aún no tienes todo definido, no pasa nada: lo vamos aclarando juntos.</p>
+
+          <ul class="datos" role="list">
+            <li data-reveal>
+              <svg class="ico-d" aria-hidden="true"><use href="#i-reloj"/></svg>
+              <div><span>Horario de servicio</span><strong>10:00 am – 5:00 pm</strong></div>
+            </li>
+            <li data-reveal>
+              <svg class="ico-d" aria-hidden="true"><use href="#i-ig"/></svg>
+              <div><span>Instagram</span><strong><a href="https://www.instagram.com/gastronomicalettuce" target="_blank" rel="noopener">@gastronomicalettuce</a></strong></div>
+            </li>
+          </ul>
+        </div>
+
+        <form class="form" id="form-cotiza" novalidate data-reveal>
+          <div class="form-cab">
+            <h3>Solicita tu cotización</h3>
+            <p class="form-nota" id="form-nota">Tu mensaje se arma solo y se abre listo para enviar.</p>
+          </div>
+
+          <div class="campo">
+            <label for="f-nombre">Tu nombre</label>
+            <input id="f-nombre" name="nombre" type="text" autocomplete="name" placeholder="¿Cómo te llamas?" required>
+            <span class="error" aria-live="polite"></span>
+          </div>
+
+          <div class="campo">
+            <label for="f-servicio">¿Qué necesitas?</label>
+            <select id="f-servicio" name="servicio" required>
+              <option value="">Elige un servicio</option>
+              <option>Barra libre / barra de bebidas</option>
+              <option>Banquete</option>
+              <option>Catering</option>
+              <option>Coffee break</option>
+              <option>Taquiza</option>
+              <option>Evento corporativo / empresarial</option>
+              <option>Capacitación</option>
+              <option>Personal de servicio (meseros, barman, runners)</option>
+              <option>Servicio especial (café, agua y jugos, deportivo, ceremonias)</option>
+              <option>Aún no lo sé, quiero que me asesoren</option>
+            </select>
+            <span class="error" aria-live="polite"></span>
+          </div>
+
+          <div class="campo-fila">
+            <div class="campo">
+              <label for="f-fecha">Fecha del evento</label>
+              <input id="f-fecha" name="fecha" type="date">
+            </div>
+            <div class="campo">
+              <label for="f-invitados">Invitados (aprox.)</label>
+              <input id="f-invitados" name="invitados" type="number" min="1" inputmode="numeric" placeholder="Ej. 80">
+            </div>
+          </div>
+
+          <div class="campo">
+            <label for="f-detalles">Cuéntanos más</label>
+            <textarea id="f-detalles" name="detalles" rows="4" placeholder="Tipo de evento, lugar, estilo, lo que imaginas…"></textarea>
+          </div>
+
+          <button class="btn btn-primario btn-bloque btn-mag" type="submit" id="form-enviar"><span id="form-enviar-texto">Quiero mi cotización</span> <svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg></button>
+          <p class="form-estado" id="form-estado" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===================== CINTA INSTAGRAM ===================== -->
+    <section class="cinta-ig" aria-label="Instagram de Gastronómica Lettuce">
+      <a class="cinta cinta-ig-in" href="https://www.instagram.com/gastronomicalettuce" target="_blank" rel="noopener" aria-label="Ver el Instagram de Gastronómica Lettuce, @gastronomicalettuce">
+        <div class="cinta-pista" data-cinta data-vel="-0.6" aria-hidden="true">
+          <span>@gastronomicalettuce</span><svg class="chispa-i"><use href="#i-brillo"/></svg>
+          <span>Mira nuestro trabajo en Instagram</span><svg class="chispa-i"><use href="#i-brillo"/></svg>
+          <span>@gastronomicalettuce</span><svg class="chispa-i"><use href="#i-brillo"/></svg>
+          <span>Síguenos y ve cómo fluye un evento</span><svg class="chispa-i"><use href="#i-brillo"/></svg>
+        </div>
+      </a>
+    </section>
+  </main>
+
+  <!-- ===================== PIE ===================== -->
+  <footer class="pie oscura">
+    <div class="contenedor pie-grid">
+      <div class="pie-marca">
+        <span class="logo-crop logo-crop--pie"><img src="assets/img/logo-fuente.jpg" alt="Logotipo de Gastronómica Lettuce" width="728" height="1600" loading="lazy" decoding="async"></span>
+        <div>
+          <p class="pie-nombre">Gastronómica Lettuce</p>
+          <p class="pie-sub">Catering &amp; events. Soluciones integrales en alimentos y bebidas para cada evento.</p>
+        </div>
+      </div>
+
+      <nav class="pie-nav" aria-label="Pie de página">
+        <a href="#servicios">Servicios</a>
+        <a href="#bebidas">Bebidas</a>
+        <a href="#alimentos">Alimentos</a>
+        <a href="#equipo">Equipo</a>
+        <a href="#metodo">Método</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <div class="pie-contacto">
+        <p>Horario de servicio: 10:00 am – 5:00 pm</p>
+        <a class="pie-ig" href="https://www.instagram.com/gastronomicalettuce" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg> @gastronomicalettuce</a>
+        <a class="btn btn-primario btn-mini" href="#contacto" data-servicio="">Quiero cotizar mi evento</a>
+      </div>
+    </div>
+    <p class="pie-gigante" aria-hidden="true">Lettuce</p>
+    <div class="contenedor pie-legal">
+      <p>© 2026 Gastronómica Lettuce. Todos los derechos reservados.</p>
+      <a href="#inicio">Volver arriba ↑</a>
+    </div>
+  </footer>
+
+  <!-- Botón flotante: WhatsApp si hay número; si no, acceso directo a cotizar -->
+  <a class="fab" id="fab" href="#contacto" aria-label="Cotizar mi evento" data-servicio="">
+    <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>
+    <span id="fab-texto">Cotizar mi evento</span>
+  </a>
+</body>
+</html>
