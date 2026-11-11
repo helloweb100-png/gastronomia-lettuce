@@ -13,8 +13,8 @@
   --plata: #c9cdd3;
   --plata-2: #eceef1;
   --plata-3: #8b9099;
-  --marfil: #f7f3ed;
-  --papel: #eee7dc;
+  --marfil: #ffffff;
+  --papel: #ffffff;
   --tinta: #121214;
   --tinta-2: #4a4a50;
   --rojo: #e11d2e;
@@ -23,7 +23,7 @@
   --vino: #26080e;
   --linea: rgba(18, 18, 20, 0.12);
 
-  --f-display: 'Bodoni Moda', 'Didot', 'Bodoni 72', 'Playfair Display', Georgia, serif;
+  --f-display: 'Baskerville Old Face', 'Baskervville', 'Libre Baskerville', Baskerville, Georgia, serif;
   --f-texto: 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --f-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 
@@ -180,7 +180,7 @@ h3 { font-family: var(--f-display); font-weight: 500; letter-spacing: -0.005em; 
 .cabecera-in {
   pointer-events: auto; max-width: 1180px; margin-inline: auto;
   display: flex; align-items: center; gap: 12px; padding: 7px 8px 7px 12px; border-radius: 999px;
-  background: rgba(247, 243, 237, 0.86);
+  background: rgba(255, 255, 255, 0.86);
   backdrop-filter: blur(18px) saturate(1.5); -webkit-backdrop-filter: blur(18px) saturate(1.5);
   border: 1px solid rgba(18, 18, 20, 0.08); box-shadow: 0 14px 40px -16px rgba(0, 0, 0, 0.55);
 }
